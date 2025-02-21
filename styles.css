@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+  }
+  
+  /* Card Container Styles */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 30px; /* Increased space between the cards */
+    padding: 20px;
+    max-width: 1200px; /* Max width to avoid stretching */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  /* Individual Card Styles */
+  .card {
+    background-color: #fff;
+    width: 100%; /* Ensures cards fill their allocated grid space */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px; /* Added bottom margin for extra spacing between rows */
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  .card p {
+    color: #666;
+    font-size: 1rem;
+    margin: 10px 0;
+  }
+  
+  /* Link Styling */
+  .card a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .card a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Hover Effect on Cards */
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1200px) {
+    .card-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row on medium screens */
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .card-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row on small screens */
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .card-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on very small screens */
+    }
+  }
